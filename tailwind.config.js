@@ -20,7 +20,7 @@ export default {
     },
     extend: {
       boxShadow: {
-        x: '',
+        dark: '0 0 4px 2px rgba(0,0,0,0.1)',
       },
     },
     container: {
