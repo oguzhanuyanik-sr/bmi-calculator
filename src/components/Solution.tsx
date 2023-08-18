@@ -5,7 +5,7 @@ type Props = {};
 const Solution = (props: Props) => {
   return (
     <div className='flex flex-col px-5 pt-10 mt-20 relative'>
-      <div className='bg-gradient'>
+      <div className='bg-gradient container'>
         {solutionData.map((item) => (
           <div className='mb-[72px]' key={item.title}>
             <img className='mb-8 h-16 w-16' src={item.icon} alt={item.title} />

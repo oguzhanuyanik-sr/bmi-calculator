@@ -6,8 +6,8 @@ const Calculator = (props: Props) => {
   const [option, setOption] = useState('metric');
 
   return (
-    <div className='bg-white rounded-2xl p-6 mt-6 mx-6 absolute top-[0px] shadow-dark'>
-      <div className='font-semibold text-xl mb-6'>
+    <div className='bg-white rounded-2xl p-6 mt-6 mx-6 absolute top-[0px] shadow-dark lg:w-[40vw]  lg:max-w-[564px]'>
+      <div className='font-semibold text-2xl mb-6'>
         <p>Enter your details below</p>
       </div>
       <form className='flex justify-between text-lg font-semibold mb-6'>
@@ -26,7 +26,7 @@ const Calculator = (props: Props) => {
           </div>
           Metric
         </label>
-        <label className='cursor-pointer radio-label' htmlFor='imperial'>
+        <label className='cursor-pointer radio-label pl-5' htmlFor='imperial'>
           <input
             className='mr-3 radio-input'
             type='radio'
@@ -45,7 +45,7 @@ const Calculator = (props: Props) => {
       <div>
         <CalculatorInput option={option} />
       </div>
-      <div className='bg-blue text-white p-8 rounded-2xl mt-6'>
+      <div className='bg-blue text-white p-8 rounded-2xl mt-6 lg:rounded-r-full'>
         <p className='text-xl font-semibold mb-3'>Your BMI is...</p>
         <p className='text-5xl mb-6'>23.4</p>
         <p className='text-sm'>
@@ -68,12 +68,12 @@ const CalculatorInput = ({ option }: { option: string }) => {
   return (
     <>
       {option === 'metric' ? (
-        <div>
+        <form className='md:flex md:gap-8'>
           <label className='flex flex-col mb-4' htmlFor='cm'>
             <span className='text-gray text-sm mb-2'>Height</span>
             <div className='relative'>
               <input
-                className={`w-full font-semibold text-xl border border-lightGray focus:border-blue outline-none rounded-xl p-6 ${
+                className={`w-full font-semibold text-xl border border-lightGray focus:border-blue outline-none rounded-xl p-6 pr-14 ${
                   heightValue === '0' ? 'text-gray' : 'text-darkGray'
                 }`}
                 type='number'
@@ -92,7 +92,7 @@ const CalculatorInput = ({ option }: { option: string }) => {
             <span className='text-gray text-sm mb-2'>Weight</span>
             <div className='relative'>
               <input
-                className={`w-full font-semibold text-xl border border-lightGray focus:border-blue outline-none rounded-xl p-6 ${
+                className={`w-full font-semibold text-xl border border-lightGray focus:border-blue outline-none rounded-xl p-6 pr-14 ${
                   weightValue === '0' ? 'text-gray' : 'text-darkGray'
                 }`}
                 type='number'
@@ -106,15 +106,15 @@ const CalculatorInput = ({ option }: { option: string }) => {
               </span>
             </div>
           </label>
-        </div>
+        </form>
       ) : (
         <div>
-          <div className='flex items-end gap-8'>
+          <form className='flex items-end gap-8'>
             <label className='flex flex-col mb-4' htmlFor='ft'>
               <span className='text-gray text-sm mb-2'>Height</span>
               <div className='relative'>
                 <input
-                  className={`w-full font-semibold text-xl border border-lightGray focus:border-blue outline-none rounded-xl p-6 ${
+                  className={`w-full font-semibold text-xl border border-lightGray focus:border-blue outline-none rounded-xl p-6 pr-14 ${
                     ftValue === '0' ? 'text-gray' : 'text-darkGray'
                   }`}
                   type='number'
@@ -131,7 +131,7 @@ const CalculatorInput = ({ option }: { option: string }) => {
             <label className='flex flex-col mb-4' htmlFor='in'>
               <div className='relative'>
                 <input
-                  className={`w-full font-semibold text-xl border border-lightGray focus:border-blue outline-none rounded-xl p-6 ${
+                  className={`w-full font-semibold text-xl border border-lightGray focus:border-blue outline-none rounded-xl p-6 pr-14 ${
                     inValue === '0' ? 'text-gray' : 'text-darkGray'
                   }`}
                   type='number'
@@ -145,14 +145,14 @@ const CalculatorInput = ({ option }: { option: string }) => {
                 </span>
               </div>
             </label>
-          </div>
+          </form>
 
-          <div className='flex items-end gap-8'>
+          <form className='flex items-end gap-8'>
             <label className='flex flex-col' htmlFor='ft'>
               <span className='text-gray text-sm mb-2'>Weight</span>
               <div className='relative'>
                 <input
-                  className={`w-full font-semibold text-xl border border-lightGray focus:border-blue outline-none rounded-xl p-6 ${
+                  className={`w-full font-semibold text-xl border border-lightGray focus:border-blue outline-none rounded-xl p-6 pr-14 ${
                     stValue === '0' ? 'text-gray' : 'text-darkGray'
                   }`}
                   type='number'
@@ -169,7 +169,7 @@ const CalculatorInput = ({ option }: { option: string }) => {
             <label className='flex flex-col' htmlFor='in'>
               <div className='relative'>
                 <input
-                  className={`w-full font-semibold text-xl border border-lightGray focus:border-blue outline-none rounded-xl p-6 ${
+                  className={`w-full font-semibold text-xl border border-lightGray focus:border-blue outline-none rounded-xl p-6 pr-14 ${
                     lbsValue === '0' ? 'text-gray' : 'text-darkGray'
                   }`}
                   type='number'
@@ -183,7 +183,7 @@ const CalculatorInput = ({ option }: { option: string }) => {
                 </span>
               </div>
             </label>
-          </div>
+          </form>
         </div>
       )}
     </>

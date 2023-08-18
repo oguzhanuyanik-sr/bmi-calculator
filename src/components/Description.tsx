@@ -4,9 +4,13 @@ type Props = {};
 
 const Description = (props: Props) => {
   return (
-    <div>
-      <img className='mb-12' src={Man} alt='Eating' />
-      <div className='px-6'>
+    <div className='container md:flex'>
+      <img
+        className='mb-12 md:h-[400px] md:ml-[-100px] xl:ml-0'
+        src={Man}
+        alt='Eating'
+      />
+      <div className='px-6 pl-16 md:flex md:flex-col md:justify-center'>
         <h3 className='font-semibold text-2xl mb-8'>
           What your BMI result means
         </h3>
