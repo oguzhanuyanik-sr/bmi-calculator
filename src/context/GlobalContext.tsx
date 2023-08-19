@@ -8,6 +8,7 @@ interface ValueData {
   inc: string;
   st: string;
   lbs: string;
+  [key: string]: string;
 }
 
 interface GlobalContextProps {
@@ -30,7 +31,7 @@ export const GlobalContext = createContext<GlobalContextProps>({
 
 export const GlobalProvider = ({ children }: { children: React.ReactNode }) => {
   const [bmi, setBmi] = useState(0);
-  const [value, setValue] = useState(defaultValue);
+  const [value, setValue] = useState<ValueData>(defaultValue);
   const [option, setOption] = useState('metric');
 
   return (

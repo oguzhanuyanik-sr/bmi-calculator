@@ -1,7 +1,19 @@
 import { useContext } from 'react';
 import { GlobalContext } from '../../../context/GlobalContext';
-import { calculatorData } from '../../../utils/constants';
 import Input from './Input';
+import { calculatorData } from '../../../utils/constants';
+
+interface CalculatorItem {
+  title: string;
+  unit: string;
+  unitOne: string;
+  unitTwo: string;
+}
+
+interface CalculatorData {
+  metric: CalculatorItem[];
+  imperial: CalculatorItem[];
+}
 
 const Form = () => {
   const { option } = useContext(GlobalContext);
@@ -17,13 +29,8 @@ const Form = () => {
           </form>
         ) : (
           <>
-            {calculatorData[option].map(
-              (
-                item: {
-                  [key: string]: string;
-                },
-                i: number
-              ) => (
+            {calculatorData[option as keyof CalculatorData].map(
+              (item: CalculatorItem, i) => (
                 <form key={i} className='flex items-end gap-8'>
                   <Input title={item.title} unit={item.unitOne} />
                   <Input title='' unit={item.unitTwo} />

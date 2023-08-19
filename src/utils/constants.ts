@@ -25,20 +25,26 @@ const calculatorData = {
     {
       title: 'Height',
       unit: 'cm',
+      unitOne: '',
+      unitTwo: '',
     },
     {
       title: 'Weight',
       unit: 'kg',
+      unitOne: '',
+      unitTwo: '',
     },
   ],
   imperial: [
     {
       title: 'Height',
+      unit: '',
       unitOne: 'ft',
       unitTwo: 'inc',
     },
     {
       title: 'Weight',
+      unit: '',
       unitOne: 'st',
       unitTwo: 'lbs',
     },
