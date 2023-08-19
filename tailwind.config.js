@@ -21,6 +21,8 @@ export default {
     extend: {
       boxShadow: {
         dark: '0 0 4px 2px rgba(0,0,0,0.1)',
+        light: '16px 32px 56px rgba(143, 174, 207, 0.15)',
+        customBlue: '0 0 0px 8px rgba(52, 95, 246, 0.25)',
       },
     },
     container: {

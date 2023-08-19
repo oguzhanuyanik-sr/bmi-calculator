@@ -1,18 +1,19 @@
-import Description from './components/Description';
-import Header from './components/Header';
 import { BrowserRouter } from 'react-router-dom';
+import { GlobalProvider } from './context/GlobalContext';
+import Description from './components/Description';
+import FirstSection from './components/FirstSection';
 import Solution from './components/Solution';
 import Limitation from './components/Limitation';
 
-type Props = {};
-
-const App = (props: Props) => {
+const App = () => {
   return (
     <BrowserRouter>
-      <Header />
-      <Description />
-      <Solution />
-      <Limitation />
+      <GlobalProvider>
+        <FirstSection />
+        <Description />
+        <Solution />
+        <Limitation />
+      </GlobalProvider>
     </BrowserRouter>
   );
 };

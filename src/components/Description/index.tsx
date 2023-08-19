@@ -1,16 +1,14 @@
-import { Man } from '../utils/constants';
+import { Man } from '../../utils/constants';
 
-type Props = {};
-
-const Description = (props: Props) => {
+const Description = () => {
   return (
     <div className='container md:flex'>
       <img
-        className='mb-12 md:h-[400px] md:ml-[-100px] xl:ml-0'
+        className='md:h-[400px] mb-12 md:ml-[-100px] xl:ml-0'
         src={Man}
         alt='Eating'
       />
-      <div className='px-6 pl-16 md:flex md:flex-col md:justify-center'>
+      <div className='md:flex md:flex-col md:justify-center px-6 pl-16'>
         <h3 className='font-semibold text-2xl mb-8'>
           What your BMI result means
         </h3>

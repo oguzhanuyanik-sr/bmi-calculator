@@ -1,5 +1,6 @@
 import Logo from '../assets/logo.svg';
-import Man from '../assets/image-man-eating.webp';
+import PatternLeft from '../assets/pattern-curved-line-left.svg';
+import PatternRight from '../assets/pattern-curved-line-right.svg';
 import Eating from '../assets/icon-eating.svg';
 import Exercise from '../assets/icon-exercise.svg';
 import Sleep from '../assets/icon-sleep.svg';
@@ -8,6 +9,41 @@ import Age from '../assets/icon-age.svg';
 import Muscle from '../assets/icon-muscle.svg';
 import Pregnancy from '../assets/icon-pregnancy.svg';
 import Race from '../assets/icon-race.svg';
+import Man from '../assets/image-man-eating.webp';
+
+const defaultValue = {
+  cm: '',
+  kg: '',
+  ft: '',
+  inc: '',
+  st: '',
+  lbs: '',
+};
+
+const calculatorData = {
+  metric: [
+    {
+      title: 'Height',
+      unit: 'cm',
+    },
+    {
+      title: 'Weight',
+      unit: 'kg',
+    },
+  ],
+  imperial: [
+    {
+      title: 'Height',
+      unitOne: 'ft',
+      unitTwo: 'inc',
+    },
+    {
+      title: 'Weight',
+      unitOne: 'st',
+      unitTwo: 'lbs',
+    },
+  ],
+};
 
 const solutionData = [
   {
@@ -55,4 +91,13 @@ const limitationData = [
   },
 ];
 
-export { Logo, Man, solutionData, limitationData };
+export {
+  Logo,
+  Man,
+  solutionData,
+  limitationData,
+  PatternLeft,
+  PatternRight,
+  calculatorData,
+  defaultValue,
+};
